@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "translation_posts",
+  "info": {
+    "singularName": "translation-post",
+    "pluralName": "translation-posts",
+    "displayName": "Translation Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hashtag-post.hashtag-post",
+      "inversedBy": "translation"
+    },
+    "translator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "translation_post"
+    },
+    "translation": {
+      "type": "text",
+      "required": false
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": ["en_tr", "en_nl", "nl_tr", "nl_en", "tr_en", "tr_nl"],
+      "required": true
+    },
+    "has_translated": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mentions",
+  "info": {
+    "singularName": "mention",
+    "pluralName": "mentions",
+    "displayName": "Mention",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "username": {
+      "type": "uid"
+    },
+    "category": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "data": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    }
+  }
+}
