@@ -1,5 +1,5 @@
 module.exports = {
-  '*/15 * * * *': {
+  '*/10 * * * *': {
     task: async ({ strapi }) => {
       try {
         const woeids = {
