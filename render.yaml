@@ -1,6 +1,7 @@
 services:
   - type: web
     name: samen-api
+    region: frankfurt
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
