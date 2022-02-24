@@ -20,6 +20,12 @@
       "type": "uid",
       "targetField": "title"
     },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "blogs"
+    },
     "locale": {
       "type": "enumeration",
       "enum": ["tr", "en", "nl"],
@@ -41,12 +47,6 @@
     },
     "content": {
       "type": "richtext"
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "blogs"
     }
   }
 }

@@ -20,6 +20,14 @@
       "configurable": false,
       "required": true
     },
+    "fullname": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
+    },
     "email": {
       "type": "email",
       "minLength": 6,
