@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "pages",
+  "collectionName": "applications",
   "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "Page"
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "Application"
   },
   "options": {
     "draftAndPublish": true
@@ -21,8 +21,7 @@
           "localized": true
         }
       },
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "slug": {
       "pluginOptions": {
@@ -32,16 +31,6 @@
       },
       "type": "uid",
       "targetField": "title"
-    },
-    "type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "enumeration",
-      "enum": ["announcement", "competition", "event", "hashtag", "news"],
-      "required": true
     },
     "content": {
       "pluginOptions": {
@@ -57,27 +46,27 @@
       "multiple": false,
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     },
-    "subpages": {
+    "applicant": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::subpage.subpage",
-      "mappedBy": "page"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "applications"
     },
-    "hashtags": {
+    "competition": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::hashtag.hashtag",
-      "mappedBy": "page"
-    },
-    "competitions": {
-      "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::competition.competition",
-      "mappedBy": "page"
+      "inversedBy": "applications"
+    },
+    "votes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vote.vote",
+      "mappedBy": "application"
     }
   }
 }

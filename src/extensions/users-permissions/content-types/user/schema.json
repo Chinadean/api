@@ -82,6 +82,18 @@
       "relation": "oneToOne",
       "target": "api::translation-post.translation-post",
       "mappedBy": "translator"
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::application.application",
+      "mappedBy": "applicant"
+    },
+    "votes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vote.vote",
+      "mappedBy": "voter"
     }
   }
 }

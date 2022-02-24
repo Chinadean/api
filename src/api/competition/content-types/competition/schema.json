@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "pages",
+  "collectionName": "competitions",
   "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "Page"
+    "singularName": "competition",
+    "pluralName": "competitions",
+    "displayName": "Competition"
   },
   "options": {
     "draftAndPublish": true
@@ -21,8 +21,7 @@
           "localized": true
         }
       },
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "slug": {
       "pluginOptions": {
@@ -33,15 +32,21 @@
       "type": "uid",
       "targetField": "title"
     },
-    "type": {
+    "date": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "enumeration",
-      "enum": ["announcement", "competition", "event", "hashtag", "news"],
-      "required": true
+      "type": "datetime"
+    },
+    "date_end": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "datetime"
     },
     "content": {
       "pluginOptions": {
@@ -57,27 +62,21 @@
       "multiple": false,
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     },
-    "subpages": {
+    "page": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::subpage.subpage",
-      "mappedBy": "page"
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "competitions"
     },
-    "hashtags": {
+    "applications": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::hashtag.hashtag",
-      "mappedBy": "page"
-    },
-    "competitions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::competition.competition",
-      "mappedBy": "page"
+      "target": "api::application.application",
+      "mappedBy": "competition"
     }
   }
 }
