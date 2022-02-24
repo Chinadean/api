@@ -10,7 +10,7 @@ module.exports = ({ env }) => {
         password: env('DATABASE_PASSWORD'),
         pool: {
           min: 0,
-          max: 97,
+          max: 20,
           idleTimeoutMillis: 30000000,
           createTimeoutMillis: 30000000,
           acquireTimeoutMillis: 30000000,
@@ -20,7 +20,7 @@ module.exports = ({ env }) => {
           },
         },
       },
-      debug: false,
+      debug: true,
     },
   }
 }
