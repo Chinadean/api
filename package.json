@@ -14,11 +14,11 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.1.0",
-    "@strapi/plugin-i18n": "4.1.0",
-    "@strapi/plugin-users-permissions": "4.1.0",
-    "@strapi/provider-email-nodemailer": "^4.1.0",
-    "@strapi/strapi": "4.1.0",
+    "@strapi/plugin-graphql": "^4.1.1",
+    "@strapi/plugin-i18n": "4.1.1",
+    "@strapi/plugin-users-permissions": "4.1.1",
+    "@strapi/provider-email-nodemailer": "^4.1.1",
+    "@strapi/strapi": "4.1.1",
     "faker": "5.5.3",
     "node-fetch": "^3.2.0",
     "pg": "^8.7.3",
