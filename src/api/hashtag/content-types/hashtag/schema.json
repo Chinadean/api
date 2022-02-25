@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hashtag",
     "pluralName": "hashtags",
-    "displayName": "Hashtag"
+    "displayName": "Hashtag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,7 +32,9 @@
         }
       },
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true,
+      "maxLength": 30
     },
     "hashtag": {
       "pluginOptions": {
@@ -40,7 +43,8 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": false
     },
     "hashtag_extra": {
       "pluginOptions": {
@@ -65,18 +69,21 @@
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "image": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": false
+      }
     },
     "tweets": {
       "pluginOptions": {
@@ -85,12 +92,6 @@
         }
       },
       "type": "json"
-    },
-    "page": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::page.page",
-      "inversedBy": "hashtags"
     },
     "posts": {
       "type": "relation",

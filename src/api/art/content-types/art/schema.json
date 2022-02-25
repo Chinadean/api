@@ -22,7 +22,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "pluginOptions": {
@@ -31,7 +32,9 @@
         }
       },
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true,
+      "maxLength": 30
     },
     "content": {
       "pluginOptions": {
@@ -39,7 +42,8 @@
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "categories": {
       "pluginOptions": {
@@ -47,7 +51,8 @@
           "localized": false
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "likes": {
       "pluginOptions": {
@@ -61,8 +66,10 @@
     "images": {
       "type": "media",
       "multiple": true,
-      "required": false,
-      "allowedTypes": ["images"],
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false

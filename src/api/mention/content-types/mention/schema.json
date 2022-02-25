@@ -17,7 +17,8 @@
   },
   "attributes": {
     "username": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     },
     "category": {
       "pluginOptions": {

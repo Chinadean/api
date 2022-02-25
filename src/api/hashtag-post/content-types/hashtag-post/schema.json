@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hashtag-post",
     "pluralName": "hashtag-posts",
-    "displayName": "Hashtag Post"
+    "displayName": "Hashtag Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,9 +26,13 @@
       "required": true
     },
     "image": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -50,7 +55,8 @@
       },
       "type": "uid",
       "targetField": "text",
-      "maxLength": 50
+      "maxLength": 30,
+      "required": true
     },
     "hashtag": {
       "type": "relation",
@@ -58,9 +64,9 @@
       "target": "api::hashtag.hashtag",
       "inversedBy": "posts"
     },
-    "translation": {
+    "translations": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::translation-post.translation-post",
       "mappedBy": "post"
     }

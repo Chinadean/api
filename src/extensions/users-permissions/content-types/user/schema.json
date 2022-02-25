@@ -79,12 +79,6 @@
       "target": "api::blog.blog",
       "mappedBy": "author"
     },
-    "translation_post": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::translation-post.translation-post",
-      "mappedBy": "translator"
-    },
     "applications": {
       "type": "relation",
       "relation": "oneToMany",
@@ -102,6 +96,12 @@
       "relation": "oneToMany",
       "target": "api::art.art",
       "mappedBy": "owner"
+    },
+    "translation_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::translation-post.translation-post",
+      "mappedBy": "translator"
     }
   }
 }

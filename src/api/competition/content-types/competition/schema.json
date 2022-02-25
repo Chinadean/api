@@ -4,7 +4,8 @@
   "info": {
     "singularName": "competition",
     "pluralName": "competitions",
-    "displayName": "Competition"
+    "displayName": "Competition",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "pluginOptions": {
@@ -30,7 +32,9 @@
         }
       },
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true,
+      "maxLength": 30
     },
     "date": {
       "pluginOptions": {
@@ -38,7 +42,8 @@
           "localized": false
         }
       },
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "date_end": {
       "pluginOptions": {
@@ -54,23 +59,21 @@
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "image": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
-    },
-    "page": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::page.page",
-      "inversedBy": "competitions"
     },
     "applications": {
       "type": "relation",

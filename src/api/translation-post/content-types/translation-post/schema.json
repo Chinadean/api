@@ -14,15 +14,15 @@
   "attributes": {
     "post": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::hashtag-post.hashtag-post",
-      "inversedBy": "translation"
+      "inversedBy": "translations"
     },
     "translator": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "translation_post"
+      "inversedBy": "translation_posts"
     },
     "translation": {
       "type": "text",
@@ -30,7 +30,14 @@
     },
     "role": {
       "type": "enumeration",
-      "enum": ["en_tr", "en_nl", "nl_tr", "nl_en", "tr_en", "tr_nl"],
+      "enum": [
+        "en_tr",
+        "en_nl",
+        "nl_tr",
+        "nl_en",
+        "tr_en",
+        "tr_nl"
+      ],
       "required": true
     },
     "has_translated": {

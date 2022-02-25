@@ -4,7 +4,8 @@
   "info": {
     "singularName": "application",
     "pluralName": "applications",
-    "displayName": "Application"
+    "displayName": "Application",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "pluginOptions": {
@@ -30,7 +32,9 @@
         }
       },
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "maxLength": 30,
+      "required": true
     },
     "content": {
       "pluginOptions": {
@@ -38,15 +42,19 @@
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "image": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
