@@ -33,7 +33,7 @@
       },
       "type": "uid",
       "targetField": "title",
-      "maxLength": 30,
+      "maxLength": 50,
       "required": true
     },
     "content": {

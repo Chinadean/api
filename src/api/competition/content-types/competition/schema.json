@@ -34,7 +34,7 @@
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 30
+      "maxLength": 50
     },
     "date": {
       "pluginOptions": {

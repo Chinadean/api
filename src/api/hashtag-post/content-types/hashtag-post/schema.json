@@ -55,7 +55,7 @@
       },
       "type": "uid",
       "targetField": "text",
-      "maxLength": 30,
+      "maxLength": 50,
       "required": true
     },
     "hashtag": {
