@@ -24,7 +24,9 @@
       "type": "string"
     },
     "avatar": {
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false
     },
@@ -94,6 +96,12 @@
       "relation": "oneToMany",
       "target": "api::vote.vote",
       "mappedBy": "voter"
+    },
+    "arts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::art.art",
+      "mappedBy": "owner"
     }
   }
 }
