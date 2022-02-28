@@ -10,7 +10,4 @@ module.exports = ({ strapi }) => ({
   async searchUsers(query) {
     return strapi.plugin('twitter').config('client').v1.searchUsers(query)
   },
-  getWelcomeMessage() {
-    return 'Welcome to Strapi 🚀'
-  },
 })

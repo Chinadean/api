@@ -97,10 +97,16 @@
       "target": "api::art.art",
       "mappedBy": "owner"
     },
-    "translation_posts": {
+    "created_posts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::translation-post.translation-post",
+      "target": "api::hashtag-post.hashtag-post",
+      "mappedBy": "creator"
+    },
+    "translated_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hashtag-post.hashtag-post",
       "mappedBy": "translator"
     }
   }

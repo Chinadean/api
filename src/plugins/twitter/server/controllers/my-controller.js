@@ -5,7 +5,7 @@ module.exports = {
     const result = strapi
       .plugin('twitter')
       .service('myService')
-      .users(ctx.query.users)
+      .users(ctx.query.q)
 
     return result
   },

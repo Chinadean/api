@@ -28,7 +28,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
@@ -64,11 +64,17 @@
       "target": "api::hashtag.hashtag",
       "inversedBy": "posts"
     },
-    "translations": {
+    "creator": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::translation-post.translation-post",
-      "mappedBy": "post"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "created_posts"
+    },
+    "translator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "translated_posts"
     }
   }
 }
