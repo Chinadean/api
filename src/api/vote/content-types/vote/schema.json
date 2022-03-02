@@ -4,13 +4,20 @@
   "info": {
     "singularName": "vote",
     "pluralName": "votes",
-    "displayName": "Vote"
+    "displayName": "Vote",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true,
+      "max": 10,
+      "min": 1
+    },
     "voter": {
       "type": "relation",
       "relation": "manyToOne",
@@ -22,10 +29,6 @@
       "relation": "manyToOne",
       "target": "api::application.application",
       "inversedBy": "votes"
-    },
-    "value": {
-      "type": "integer",
-      "required": true
     }
   }
 }

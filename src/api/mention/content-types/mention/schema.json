@@ -20,14 +20,6 @@
       "type": "uid",
       "required": true
     },
-    "category": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
     "data": {
       "pluginOptions": {
         "i18n": {
@@ -35,6 +27,12 @@
         }
       },
       "type": "json"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "mentions"
     }
   }
 }

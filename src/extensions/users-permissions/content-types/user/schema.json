@@ -20,21 +20,20 @@
       "configurable": false,
       "required": true
     },
-    "fullname": {
-      "type": "string"
-    },
-    "avatar": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "email": {
       "type": "email",
       "minLength": 6,
       "configurable": false,
       "required": true
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "provider": {
       "type": "string",
@@ -73,29 +72,11 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "author"
-    },
-    "applications": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::application.application",
-      "mappedBy": "applicant"
-    },
     "votes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::vote.vote",
       "mappedBy": "voter"
-    },
-    "arts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::art.art",
-      "mappedBy": "owner"
     },
     "created_posts": {
       "type": "relation",
@@ -103,11 +84,41 @@
       "target": "api::hashtag-post.hashtag-post",
       "mappedBy": "creator"
     },
-    "translated_posts": {
+    "author": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::hashtag-post.hashtag-post",
-      "mappedBy": "translator"
+      "relation": "oneToOne",
+      "target": "api::author.author",
+      "inversedBy": "user"
+    },
+    "translator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::translator.translator",
+      "inversedBy": "user"
+    },
+    "volunteer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::volunteer.volunteer",
+      "inversedBy": "user"
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::artist.artist",
+      "inversedBy": "user"
+    },
+    "applicant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::applicant.applicant",
+      "inversedBy": "user"
+    },
+    "juri": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juri.juri",
+      "inversedBy": "user"
     }
   }
 }

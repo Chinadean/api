@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "juris",
+  "info": {
+    "singularName": "juri",
+    "pluralName": "juris",
+    "displayName": "Juri"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "profile.user",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "juri"
+    },
+    "votes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::juri-vote.juri-vote",
+      "mappedBy": "juri"
+    }
+  }
+}

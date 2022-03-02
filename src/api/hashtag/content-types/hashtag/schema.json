@@ -76,9 +76,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -98,6 +96,12 @@
       "relation": "oneToMany",
       "target": "api::hashtag-post.hashtag-post",
       "mappedBy": "hashtag"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "hashtags"
     }
   }
 }
