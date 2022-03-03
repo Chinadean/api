@@ -1,9 +1,13 @@
 module.exports = {
-  beforeCreate(event) {
+  async beforeCreate(event) {
     const { data } = event.params
 
     if (data.localizations[0]) {
-      if (!data.translator) data.translator = data.createdBy
+      const translator = await strapi.db
+        .query('api::translator.translator')
+        .findOne({ where: { user: { id: data.createdBy } } })
+
+      if (!data.translator) data.translator = translator.id
     } else data.creator = data.createdBy
   },
 }
