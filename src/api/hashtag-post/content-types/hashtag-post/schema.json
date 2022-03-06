@@ -34,13 +34,16 @@
       "type": "uid",
       "targetField": "text",
       "maxLength": 50,
-      "required": true
+      "required": false
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "videos"],
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true

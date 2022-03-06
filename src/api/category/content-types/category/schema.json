@@ -67,7 +67,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::announcement.announcement",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
     }
   }
 }

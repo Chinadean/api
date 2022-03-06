@@ -28,7 +28,7 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true,
+      "required": false,
       "maxLength": 50
     },
     "likes": {
@@ -53,7 +53,9 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false

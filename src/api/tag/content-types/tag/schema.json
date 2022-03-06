@@ -49,19 +49,19 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::announcement.announcement",
-      "inversedBy": "tags"
+      "mappedBy": "tags"
     },
     "applications": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::application.application",
-      "inversedBy": "tags"
+      "mappedBy": "tags"
     },
     "hashtag_posts": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::hashtag-post.hashtag-post",
-      "inversedBy": "tags"
+      "mappedBy": "tags"
     }
   }
 }
