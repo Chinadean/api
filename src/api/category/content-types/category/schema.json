@@ -68,6 +68,12 @@
       "relation": "manyToMany",
       "target": "api::announcement.announcement",
       "mappedBy": "categories"
+    },
+    "activities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::activity.activity",
+      "inversedBy": "categories"
     }
   }
 }

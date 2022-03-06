@@ -18,7 +18,7 @@
       "component": "profile.user",
       "required": true
     },
-    "languages": {
+    "occupation": {
       "type": "string",
       "required": true
     },
@@ -33,6 +33,12 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "translator"
+    },
+    "roles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lang-role.lang-role",
+      "mappedBy": "translators"
     }
   }
 }
