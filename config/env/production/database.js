@@ -10,14 +10,7 @@ module.exports = ({ env }) => {
         password: env('DATABASE_PASSWORD'),
         pool: {
           min: 0,
-          max: 20,
-          idleTimeoutMillis: 30000000,
-          createTimeoutMillis: 30000000,
-          acquireTimeoutMillis: 30000000,
-          propagateCreateError: false,
-          ssl: {
-            rejectUnauthorized: false,
-          },
+          max: 15,
         },
       },
       debug: false,
