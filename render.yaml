@@ -5,11 +5,11 @@ services:
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
-    startCommand: rsync -a public/ /var/lib/data/public/ && yarn start
+    startCommand: yarn start
     healthCheckPath: /_health
     disk:
       name: strapi-uploads
-      mountPath: /var/lib/data/
+      mountPath: /opt/render/project/src/public/uploads
       sizeGB: 1
     envVars:
       - key: NODE_VERSION
@@ -17,7 +17,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_FILENAME
-        value: /var/lib/data/strapi.db
+        value: /opt/render/project/src/data/strapi.db
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
