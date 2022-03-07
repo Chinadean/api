@@ -18,10 +18,6 @@
       "component": "profile.user",
       "required": true
     },
-    "occupation": {
-      "type": "string",
-      "required": true
-    },
     "posts": {
       "type": "relation",
       "relation": "oneToMany",

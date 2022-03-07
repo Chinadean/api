@@ -20,6 +20,9 @@
     "phone": {
       "type": "string"
     },
+    "job": {
+      "type": "string"
+    },
     "country": {
       "type": "enumeration",
       "enum": [
