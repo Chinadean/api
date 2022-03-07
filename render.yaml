@@ -22,7 +22,3 @@ services:
         generateValue: true
       - key: ADMIN_JWT_SECRET
         generateValue: true
-
-databases:
-  - name: samen-api
-    plan: starter
