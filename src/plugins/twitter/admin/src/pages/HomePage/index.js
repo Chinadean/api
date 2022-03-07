@@ -5,15 +5,18 @@
  */
 
 import React, { memo } from 'react'
-// import PropTypes from 'prop-types';
-import pluginId from '../../pluginId'
+import { Box } from '@strapi/design-system/Box'
+import { Layout } from '@strapi/design-system/Layout'
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>{pluginId}&apos;s HomePage</h1>
-      <p>Happy coding</p>
-    </div>
+    <Box background="neutral100">
+      <Layout>
+        <Box padding={8} background="neutral100">
+          Twitter API
+        </Box>
+      </Layout>
+    </Box>
   )
 }
 
