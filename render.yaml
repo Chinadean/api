@@ -5,11 +5,11 @@ services:
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
-    startCommand: yarn start
+    startCommand: rsync -a public/ /data/public/ && yarn start
     healthCheckPath: /_health
     disk:
       name: strapi-uploads
-      mountPath: /opt/render/project/src/public/uploads
+      mountPath: /data
       sizeGB: 1
     envVars:
       - key: NODE_VERSION
