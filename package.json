@@ -21,7 +21,6 @@
     "@strapi/strapi": "4.1.2",
     "faker": "5.5.3",
     "node-fetch": "^3.2.1",
-    "pg": "^8.7.3",
     "sqlite3": "5.0.2",
     "strapi-plugin-comments": "^2.0.9",
     "twitter-api-v2": "^1.11.0"
