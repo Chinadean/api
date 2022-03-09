@@ -53,13 +53,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::volunteer.volunteer",
-      "inversedBy": "jobs"
+      "inversedBy": "subjects"
     },
     "project": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project.project",
-      "inversedBy": "jobs"
+      "inversedBy": "subjects"
     }
   }
 }

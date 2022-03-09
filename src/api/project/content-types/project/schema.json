@@ -62,7 +62,7 @@
       },
       "type": "string"
     },
-    "jobs": {
+    "subjects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",

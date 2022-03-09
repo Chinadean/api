@@ -318,11 +318,11 @@
       "target": "plugin::users-permissions.user",
       "mappedBy": "volunteer"
     },
-    "jobs": {
+    "subjects": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::job.job",
-      "mappedBy": "volunteers"
+      "inversedBy": "volunteers"
     },
     "translator": {
       "type": "relation",
