@@ -318,12 +318,6 @@
       "target": "plugin::users-permissions.user",
       "mappedBy": "volunteer"
     },
-    "subjects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::job.job",
-      "inversedBy": "volunteers"
-    },
     "translator": {
       "type": "relation",
       "relation": "oneToOne",
@@ -347,6 +341,12 @@
       "relation": "oneToOne",
       "target": "api::artist.artist",
       "inversedBy": "volunteer"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "inversedBy": "volunteers"
     }
   }
 }
