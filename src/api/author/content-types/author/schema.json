@@ -12,22 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "profile": {
-      "type": "component",
-      "repeatable": false,
-      "component": "profile.user",
-      "required": true
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "author"
-    },
     "blogs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::blog.blog",
+      "mappedBy": "author"
+    },
+    "volunteer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::volunteer.volunteer",
       "mappedBy": "author"
     }
   }

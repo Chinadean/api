@@ -11,11 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "profile": {
-      "type": "component",
-      "repeatable": false,
-      "component": "profile.user"
-    },
     "applications": {
       "type": "relation",
       "relation": "oneToMany",

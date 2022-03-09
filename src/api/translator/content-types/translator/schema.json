@@ -12,22 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "profile": {
-      "type": "component",
-      "repeatable": false,
-      "component": "profile.user",
-      "required": true
-    },
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::hashtag-post.hashtag-post",
-      "mappedBy": "translator"
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
       "mappedBy": "translator"
     },
     "roles": {
@@ -35,6 +23,12 @@
       "relation": "manyToMany",
       "target": "api::lang-role.lang-role",
       "mappedBy": "translators"
+    },
+    "volunteer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::volunteer.volunteer",
+      "inversedBy": "translator"
     }
   }
 }

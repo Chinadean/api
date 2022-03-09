@@ -12,15 +12,36 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "profile": {
-      "type": "component",
-      "repeatable": false,
-      "component": "profile.user"
+    "username": {
+      "type": "uid",
+      "required": true
     },
-    "phone": {
+    "fullname": {
       "type": "string"
     },
-    "job": {
+    "bio": {
+      "type": "text"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "inMailingList": {
+      "type": "boolean",
+      "default": false
+    },
+    "phone": {
       "type": "string"
     },
     "country": {
@@ -296,6 +317,42 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "volunteer"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "volunteers"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "inversedBy": "volunteers"
+    },
+    "translator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::translator.translator",
+      "mappedBy": "volunteer"
+    },
+    "juri": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juri.juri",
+      "inversedBy": "volunteer"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author",
+      "inversedBy": "volunteer"
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::artist.artist",
+      "inversedBy": "volunteer"
     }
   }
 }

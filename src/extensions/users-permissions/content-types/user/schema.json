@@ -86,40 +86,16 @@
       "target": "api::hashtag-post.hashtag-post",
       "mappedBy": "creator"
     },
-    "author": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::author.author",
-      "inversedBy": "user"
-    },
-    "translator": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::translator.translator",
-      "inversedBy": "user"
-    },
     "volunteer": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::volunteer.volunteer",
       "inversedBy": "user"
     },
-    "artist": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::artist.artist",
-      "inversedBy": "user"
-    },
     "applicant": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::applicant.applicant",
-      "inversedBy": "user"
-    },
-    "juri": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::juri.juri",
       "inversedBy": "user"
     }
   }
