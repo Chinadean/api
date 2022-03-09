@@ -33,16 +33,24 @@
       "type": "uid",
       "targetField": "name"
     },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "jobs"
+    "key": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     },
     "volunteers": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::volunteer.volunteer",
+      "inversedBy": "jobs"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
       "inversedBy": "jobs"
     }
   }
