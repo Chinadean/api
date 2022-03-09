@@ -39,18 +39,6 @@
         }
       },
       "type": "text"
-    },
-    "projects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::project.project",
-      "inversedBy": "jobs"
-    },
-    "volunteers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::volunteer.volunteer",
-      "inversedBy": "jobs"
     }
   }
 }
