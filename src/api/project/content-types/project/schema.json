@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -41,11 +42,12 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -59,12 +61,6 @@
         }
       },
       "type": "string"
-    },
-    "volunteers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::volunteer.volunteer",
-      "mappedBy": "projects"
     },
     "jobs": {
       "type": "relation",
