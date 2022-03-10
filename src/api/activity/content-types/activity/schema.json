@@ -80,13 +80,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "inversedBy": "activities"
+      "mappedBy": "activities"
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "activities"
+      "mappedBy": "activities"
     }
   }
 }
