@@ -13,8 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "code": {
-      "pluginOptions": {},
-      "type": "string"
+      "type": "uid",
+      "targetField": "name_en"
     },
     "name_en": {
       "pluginOptions": {},
@@ -35,6 +35,18 @@
     },
     "description_tr": {
       "type": "text"
+    },
+    "volunteers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::volunteer.volunteer",
+      "inversedBy": "jobs"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "jobs"
     }
   }
 }

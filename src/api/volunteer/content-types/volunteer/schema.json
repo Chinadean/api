@@ -344,8 +344,9 @@
     },
     "jobs": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::job.job"
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "inversedBy": "volunteers"
     }
   }
 }
