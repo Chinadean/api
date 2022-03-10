@@ -36,12 +36,6 @@
     "description_tr": {
       "type": "text"
     },
-    "volunteers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::volunteer.volunteer",
-      "inversedBy": "jobs"
-    },
     "project": {
       "type": "relation",
       "relation": "manyToOne",
