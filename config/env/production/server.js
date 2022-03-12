@@ -2,7 +2,7 @@ const cronTasks = require('./cron-tasks')
 
 module.exports = ({ env }) => ({
   host: '0.0.0.0',
-  url: env('RENDER_EXTERNAL_URL'),
+  url: env('SERVER_URL'),
   app: {
     keys: env.array('APP_KEYS'),
   },
