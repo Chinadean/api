@@ -36,6 +36,14 @@
       "required": false,
       "maxLength": 50
     },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
     "content": {
       "pluginOptions": {
         "i18n": {
@@ -49,9 +57,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -67,7 +73,7 @@
       "type": "datetime",
       "required": true
     },
-    "date_end": {
+    "dateEnd": {
       "pluginOptions": {
         "i18n": {
           "localized": false

@@ -12,23 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "role": {
+      "type": "enumeration",
+      "enum": ["en_tr", "en_nl", "tr_en", "tr_nl", "nl_en", "nl_tr"],
+      "required": true
+    },
     "translators": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::translator.translator",
       "inversedBy": "roles"
-    },
-    "role": {
-      "type": "enumeration",
-      "enum": [
-        "en_tr",
-        "en_nl",
-        "tr_en",
-        "tr_nl",
-        "nl_en",
-        "nl_tr"
-      ],
-      "required": true
     }
   }
 }

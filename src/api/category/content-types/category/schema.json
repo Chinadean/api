@@ -14,17 +14,16 @@
   "attributes": {
     "code": {
       "pluginOptions": {},
-      "type": "uid",
-      "targetField": "label_en"
+      "type": "uid"
     },
-    "label_en": {
+    "name_en": {
       "pluginOptions": {},
       "type": "string"
     },
-    "label_nl": {
+    "name_nl": {
       "type": "string"
     },
-    "label_tr": {
+    "name_tr": {
       "type": "string"
     },
     "arts": {

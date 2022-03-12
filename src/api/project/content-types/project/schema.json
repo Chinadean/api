@@ -41,13 +41,20 @@
       "pluginOptions": {},
       "type": "text"
     },
+    "content_en": {
+      "type": "richtext"
+    },
+    "content_nl": {
+      "type": "richtext"
+    },
+    "content_tr": {
+      "type": "richtext"
+    },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "pluginOptions": {}
     },
     "link": {

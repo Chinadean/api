@@ -15,7 +15,7 @@
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::hashtag-post.hashtag-post",
+      "target": "api::post.post",
       "mappedBy": "translator"
     },
     "roles": {

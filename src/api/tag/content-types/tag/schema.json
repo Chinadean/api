@@ -14,17 +14,16 @@
   "attributes": {
     "code": {
       "pluginOptions": {},
-      "type": "uid",
-      "targetField": "label_en"
+      "type": "uid"
     },
-    "label_en": {
+    "name_en": {
       "pluginOptions": {},
       "type": "string"
     },
-    "label_nl": {
+    "name_nl": {
       "type": "string"
     },
-    "label_tr": {
+    "name_tr": {
       "type": "string"
     },
     "arts": {
@@ -51,10 +50,10 @@
       "target": "api::application.application",
       "mappedBy": "tags"
     },
-    "hashtag_posts": {
+    "posts": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::hashtag-post.hashtag-post",
+      "target": "api::post.post",
       "mappedBy": "tags"
     },
     "activities": {

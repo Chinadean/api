@@ -33,6 +33,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "mentions"
+    },
+    "hashtags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hashtag.hashtag",
+      "inversedBy": "mentions"
     }
   }
 }

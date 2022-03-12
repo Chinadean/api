@@ -76,7 +76,7 @@
       "target": "api::vote.vote",
       "mappedBy": "application"
     },
-    "juri_votes": {
+    "juriVotes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::juri-vote.juri-vote",

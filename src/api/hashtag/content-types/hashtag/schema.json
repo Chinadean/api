@@ -36,6 +36,36 @@
       "required": false,
       "maxLength": 50
     },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "hashtag": {
       "pluginOptions": {
         "i18n": {
@@ -63,28 +93,6 @@
       "type": "datetime",
       "required": true
     },
-    "content": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
-      "required": true
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "tweets": {
       "pluginOptions": {
         "i18n": {
@@ -96,7 +104,7 @@
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::hashtag-post.hashtag-post",
+      "target": "api::post.post",
       "mappedBy": "hashtag"
     },
     "categories": {
@@ -104,6 +112,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "hashtags"
+    },
+    "mentions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mention.mention",
+      "inversedBy": "hashtags"
     }
   }
 }

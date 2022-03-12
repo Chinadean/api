@@ -26,17 +26,6 @@
       "configurable": false,
       "required": true
     },
-    "fullname": {
-      "type": "string"
-    },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "provider": {
       "type": "string",
       "configurable": false
@@ -74,16 +63,27 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "fullname": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "votes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::vote.vote",
       "mappedBy": "voter"
     },
-    "created_posts": {
+    "createdPosts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::hashtag-post.hashtag-post",
+      "target": "api::post.post",
       "mappedBy": "creator"
     },
     "volunteer": {

@@ -2,9 +2,9 @@
   "kind": "collectionType",
   "collectionName": "hashtag_posts",
   "info": {
-    "singularName": "hashtag-post",
-    "pluralName": "hashtag-posts",
-    "displayName": "Hashtag Post",
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
     "description": ""
   },
   "options": {
@@ -50,7 +50,7 @@
         }
       }
     },
-    "twitter_image": {
+    "twitterMedia": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -64,12 +64,6 @@
       "target": "api::hashtag.hashtag",
       "inversedBy": "posts"
     },
-    "creator": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "created_posts"
-    },
     "translator": {
       "type": "relation",
       "relation": "manyToOne",
@@ -80,7 +74,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "inversedBy": "hashtag_posts"
+      "inversedBy": "posts"
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "createdPosts"
     }
   }
 }

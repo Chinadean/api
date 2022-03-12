@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::application.application",
-      "inversedBy": "juri_votes"
+      "inversedBy": "juriVotes"
     }
   }
 }

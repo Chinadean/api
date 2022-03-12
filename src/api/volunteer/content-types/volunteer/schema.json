@@ -14,7 +14,7 @@
   "attributes": {
     "username": {
       "type": "uid",
-      "required": true
+      "required": false
     },
     "fullname": {
       "type": "string"
@@ -36,10 +36,6 @@
     },
     "facebook": {
       "type": "string"
-    },
-    "inMailingList": {
-      "type": "boolean",
-      "default": false
     },
     "phone": {
       "type": "string"
@@ -294,11 +290,15 @@
       ],
       "default": "NL"
     },
+    "inMailingList": {
+      "type": "boolean",
+      "default": false
+    },
     "approved": {
       "type": "boolean",
       "default": false
     },
-    "public": {
+    "isPublic": {
       "type": "boolean",
       "default": false
     },
