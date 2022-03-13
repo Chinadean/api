@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donates",
+  "info": {
+    "singularName": "donate",
+    "pluralName": "donates",
+    "displayName": "Donate"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transactionId": {
+      "type": "string",
+      "unique": true
+    },
+    "mollieId": {
+      "type": "string",
+      "unique": true
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "adddress": {
+      "type": "text"
+    }
+  }
+}
