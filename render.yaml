@@ -32,6 +32,7 @@ databases:
     region: frankfurt
     plan: starter
     user: samen_user
+    version: 14
 
 envVarGroups:
     - name: samen-api
