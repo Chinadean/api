@@ -13,8 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "status": {
-      "type": "string",
-      "unique": true
+      "type": "string"
     },
     "mollieId": {
       "type": "string",
@@ -34,9 +33,6 @@
     },
     "adddress": {
       "type": "text"
-    },
-    "key": {
-      "type": "uid"
     }
   }
 }
