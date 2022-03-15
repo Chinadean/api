@@ -4,14 +4,15 @@
   "info": {
     "singularName": "donate",
     "pluralName": "donates",
-    "displayName": "Donate"
+    "displayName": "Donate",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "transactionId": {
+    "status": {
       "type": "string",
       "unique": true
     },
