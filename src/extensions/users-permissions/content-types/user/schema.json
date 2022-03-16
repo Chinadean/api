@@ -63,17 +63,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "fullname": {
-      "type": "string"
-    },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "votes": {
       "type": "relation",
       "relation": "oneToMany",

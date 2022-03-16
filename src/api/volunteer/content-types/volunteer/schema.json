@@ -13,32 +13,27 @@
   "pluginOptions": {},
   "attributes": {
     "username": {
-      "type": "uid",
-      "required": false
+      "type": "string",
+      "unique": true,
+      "required": true
     },
-    "fullname": {
+    "name": {
       "type": "string"
     },
     "email": {
       "type": "email",
       "unique": true
     },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
     "bio": {
       "type": "text"
     },
     "occupation": {
-      "type": "string"
-    },
-    "linkedin": {
-      "type": "string"
-    },
-    "twitter": {
-      "type": "string"
-    },
-    "instagram": {
-      "type": "string"
-    },
-    "facebook": {
       "type": "string"
     },
     "phone": {
@@ -294,6 +289,28 @@
       ],
       "default": "NL"
     },
+    "availableHours": {
+      "type": "integer",
+      "required": true
+    },
+    "heardFrom": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
     "inMailingList": {
       "type": "boolean",
       "default": false
@@ -305,16 +322,6 @@
     "isPublic": {
       "type": "boolean",
       "default": false
-    },
-    "availableHours": {
-      "type": "integer",
-      "required": true
-    },
-    "heardFrom": {
-      "type": "string"
-    },
-    "comment": {
-      "type": "text"
     },
     "user": {
       "type": "relation",

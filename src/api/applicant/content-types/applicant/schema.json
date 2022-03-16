@@ -4,13 +4,17 @@
   "info": {
     "singularName": "applicant",
     "pluralName": "applicants",
-    "displayName": "Applicant"
+    "displayName": "Applicant",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
     "applications": {
       "type": "relation",
       "relation": "oneToMany",
