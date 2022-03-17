@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "hashtag_posts",
+  "collectionName": "posts",
   "info": {
     "singularName": "post",
     "pluralName": "posts",
@@ -22,17 +22,13 @@
           "localized": true
         }
       },
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -53,16 +49,16 @@
       "target": "api::hashtag.hashtag",
       "inversedBy": "posts"
     },
-    "translator": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::translator.translator",
-      "inversedBy": "posts"
-    },
     "tags": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
+      "inversedBy": "posts"
+    },
+    "translator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::translator.translator",
       "inversedBy": "posts"
     },
     "creator": {
