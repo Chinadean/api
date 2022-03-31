@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_feedbacks",
+  "info": {
+    "singularName": "art-feedback",
+    "pluralName": "art-feedbacks",
+    "displayName": "Art Feedback"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "text"
+    },
+    "point": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "approve",
+        "reject"
+      ]
+    },
+    "art": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::art.art",
+      "inversedBy": "feedbacks"
+    },
+    "manager": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "art_feedbacks"
+    }
+  }
+}

@@ -66,12 +66,29 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       }
+    },
+    "status": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "archive"
+      ],
+      "default": "pending"
     },
     "artist": {
       "type": "relation",
@@ -90,6 +107,12 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "mappedBy": "arts"
+    },
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::art-feedback.art-feedback",
+      "mappedBy": "art"
     }
   }
 }
