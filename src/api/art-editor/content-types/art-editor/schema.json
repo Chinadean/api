@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_editors",
+  "info": {
+    "singularName": "art-editor",
+    "pluralName": "art-editors",
+    "displayName": "Art Editor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::art-feedback.art-feedback",
+      "mappedBy": "editor"
+    },
+    "volunteer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::volunteer.volunteer",
+      "mappedBy": "art_editor"
+    }
+  }
+}

@@ -24,12 +24,6 @@
       "type": "email",
       "unique": true
     },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
-    },
     "bio": {
       "type": "text"
     },
@@ -347,16 +341,16 @@
       "target": "api::author.author",
       "inversedBy": "volunteer"
     },
-    "artist": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::artist.artist",
-      "inversedBy": "volunteer"
-    },
     "jobs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job"
+    },
+    "art_editor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::art-editor.art-editor",
+      "inversedBy": "volunteer"
     }
   }
 }

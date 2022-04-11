@@ -4,7 +4,8 @@
   "info": {
     "singularName": "art-feedback",
     "pluralName": "art-feedbacks",
-    "displayName": "Art Feedback"
+    "displayName": "Art Feedback",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -32,11 +33,11 @@
       "target": "api::art.art",
       "inversedBy": "feedbacks"
     },
-    "manager": {
+    "editor": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "art_feedbacks"
+      "target": "api::art-editor.art-editor",
+      "inversedBy": "feedbacks"
     }
   }
 }

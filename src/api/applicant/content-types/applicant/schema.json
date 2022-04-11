@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "applications": {
       "type": "relation",
       "relation": "oneToMany",

@@ -26,6 +26,13 @@
       "configurable": false,
       "required": true
     },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
     "provider": {
       "type": "string",
       "configurable": false
@@ -87,11 +94,11 @@
       "target": "api::applicant.applicant",
       "inversedBy": "user"
     },
-    "art_feedbacks": {
+    "artist": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::art-feedback.art-feedback",
-      "mappedBy": "manager"
+      "relation": "oneToOne",
+      "target": "api::artist.artist",
+      "inversedBy": "user"
     }
   }
 }

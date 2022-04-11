@@ -18,11 +18,11 @@
       "target": "api::art.art",
       "mappedBy": "artist"
     },
-    "volunteer": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::volunteer.volunteer",
-      "mappedBy": "artist"
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "artist"
     }
   }
 }
