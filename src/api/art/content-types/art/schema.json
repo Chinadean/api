@@ -53,15 +53,6 @@
       "type": "richtext",
       "required": true
     },
-    "likes": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer",
-      "default": 0
-    },
     "images": {
       "type": "media",
       "multiple": true,
@@ -113,6 +104,12 @@
       "relation": "oneToMany",
       "target": "api::art-feedback.art-feedback",
       "mappedBy": "art"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "liked_arts"
     }
   }
 }
