@@ -26,13 +26,6 @@
       "configurable": false,
       "required": true
     },
-    "avatar": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "provider": {
       "type": "string",
       "configurable": false
@@ -69,6 +62,14 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "votes": {
       "type": "relation",
